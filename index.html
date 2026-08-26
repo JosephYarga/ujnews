@@ -707,10 +707,36 @@
       }
       footer .logo {
         font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Réduit l'écart pour un meilleur rendu sur mobile */
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+        justify-content: center; /* Centre le contenu sur mobile */
       }
       footer .logo img {
         height: 26px;
         width: 26px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid var(--gold);
+      }
+      footer .logo span {
+        color: var(--gold-light);
+      }
+      /* Centrage du footer sur mobile */
+      @media (max-width: 680px) {
+        footer .container {
+          flex-direction: column;
+          text-align: center;
+        }
+        footer .logo {
+          justify-content: center;
+          width: 100%;
+        }
+        footer div:last-child {
+          width: 100%;
+          text-align: center;
+        }
       }
 
       /* ── responsive ── */
@@ -818,7 +844,6 @@
           <div class="masthead-meta">
             Mouvement des Jeunes · CIE/MIA — 25 août 2026
           </div>
-          <img src="images/logo-ciemia.jpg" alt="CIE-MIA" />
         </div>
       </div>
     </header>
