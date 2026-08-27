@@ -6,36 +6,27 @@
       property="og:title"
       content="UJ News — 13ᵉ édition · 20 ans des Universités des Jeunes"
     />
-
     <meta
       property="og:description"
       content="Découvrez l'actualité de la 13ᵉ édition des Universités des Jeunes et la célébration des 20 ans des UJ."
     />
-
     <meta
       property="og:image"
       content="https://ujnews.vercel.app/images/logo.jpg"
     />
-
     <meta property="og:url" content="https://ujnews.vercel.app/" />
-
     <meta property="og:type" content="website" />
-
     <meta property="og:site_name" content="UJ News" />
-
     <!-- Pour WhatsApp, Facebook, LinkedIn, etc. -->
     <meta name="twitter:card" content="summary_large_image" />
-
     <meta
       name="twitter:title"
       content="UJ News — 13ᵉ édition · 20 ans des Universités des Jeunes"
     />
-
     <meta
       name="twitter:description"
       content="Découvrez l'actualité de la 13ᵉ édition des Universités des Jeunes."
     />
-
     <meta
       name="twitter:image"
       content="https://ujnews.vercel.app/images/hero.jpg"
@@ -747,9 +738,9 @@
         font-size: 1rem;
         display: flex;
         align-items: center;
-        gap: 8px; /* Réduit l'écart pour un meilleur rendu sur mobile */
-        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-        justify-content: center; /* Centre le contenu sur mobile */
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       footer .logo img {
         height: 26px;
@@ -761,7 +752,6 @@
       footer .logo span {
         color: var(--gold-light);
       }
-      /* Centrage du footer sur mobile */
       @media (max-width: 680px) {
         footer .container {
           flex-direction: column;
@@ -774,6 +764,86 @@
         footer div:last-child {
           width: 100%;
           text-align: center;
+        }
+      }
+
+      /* ── team section ── */
+      .team-section {
+        margin: 48px 0 32px;
+        padding-top: 8px;
+      }
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 18px;
+        margin-top: 16px;
+      }
+      .team-card {
+        background: var(--surface);
+        padding: 12px 16px 14px;
+        border-radius: var(--radius-sm);
+        border-left: 4px solid var(--gold);
+        box-shadow: var(--shadow);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .team-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+      }
+      .team-card .avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--gold-glow);
+        color: var(--navy);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--serif);
+        font-size: 1rem;
+        font-weight: 400;
+        flex-shrink: 0;
+      }
+      .team-card .name {
+        font-weight: 600;
+        font-size: 0.85rem;
+        color: var(--navy);
+        letter-spacing: -0.01em;
+      }
+      .team-card .role {
+        font-family: var(--mono);
+        font-size: 0.55rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--rose);
+        margin-top: 1px;
+      }
+      @media (max-width: 520px) {
+        .team-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        .team-card {
+          padding: 10px 12px;
+        }
+        .team-card .avatar {
+          width: 30px;
+          height: 30px;
+          font-size: 0.8rem;
+        }
+        .team-card .name {
+          font-size: 0.75rem;
+        }
+      }
+      @media (max-width: 400px) {
+        .team-grid {
+          grid-template-columns: 1fr;
         }
       }
 
@@ -1204,7 +1274,6 @@
           <h2>Le décollage de l'Afrique commence par une jeunesse préparée</h2>
           <h3>Message introductif du pasteur Serge Samandoulgou</h3>
 
-          <!-- ─── CARTE AVEC L'IMAGE DE SERGE ─── -->
           <div class="speaker-with-img">
             <img
               src="images/pasteurserge.jpg"
@@ -1342,6 +1411,79 @@
               >
             </p>
           </div>
+
+          <!-- ─── ÉQUIPE DE RÉDACTION ─── -->
+          <div class="team-section">
+            <h2>Équipe de rédaction</h2>
+            <div class="team-grid">
+              <div class="team-card">
+                <div class="avatar">FT</div>
+                <div>
+                  <div class="name">Fidèle TIAMASSA</div>
+                </div>
+              </div>
+              <div class="team-card">
+                <div class="avatar">YL</div>
+                <div>
+                  <div class="name">Yemboaro P. LOMPO</div>
+                </div>
+              </div>
+              <div class="team-card">
+                <div class="avatar">JM</div>
+                <div>
+                  <div class="name">Jacques N. MANA</div>
+                </div>
+              </div>
+              <div class="team-card">
+                <div class="avatar">RT</div>
+                <div>
+                  <div class="name">Ruth A. THIOMBIANO</div>
+                </div>
+              </div>
+              <div class="team-card">
+                <div class="avatar">SW</div>
+                <div>
+                  <div class="name">Simon WORO</div>
+                </div>
+              </div>
+              <div class="team-card">
+                <div class="avatar">AA</div>
+                <div>
+                  <div class="name">Afi AMÉTÉFÉ</div>
+                </div>
+              </div>
+              <div class="team-card">
+                <div class="avatar">CY</div>
+                <div>
+                  <div class="name">Pasteur Charles YONI</div>
+                </div>
+              </div>
+              <div class="team-card">
+                <div class="avatar">AP</div>
+                <div>
+                  <div class="name">Adjeh PALÉ</div>
+                </div>
+              </div>
+              <div class="team-card">
+                <div class="avatar">PO</div>
+                <div>
+                  <div class="name">Prince O. OUÉDRAOGO</div>
+                </div>
+              </div>
+              <div class="team-card">
+                <div class="avatar">JK</div>
+                <div>
+                  <div class="name">Josué KAMBOU</div>
+                </div>
+              </div>
+              <div class="team-card">
+                <div class="avatar">JY</div>
+                <div>
+                  <div class="name">Joseph YARGA</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- ─── SIDEBAR ─── -->
@@ -1359,6 +1501,14 @@
             <p>
               Bishop Daniel Fulbert N'CHO<br />Pasteur Oumarou Josué
               OUEDRAOGO<br />Enseignant Amen KOSSI
+            </p>
+          </div>
+          <div class="rail-box">
+            <div class="rail-label">Équipe de rédaction</div>
+            <p style="font-size: 0.75rem; line-height: 1.6">
+              Fidèle TIAMASSA · Yemboaro P. LOMPO · Jacques N. MANA · Ruth A.
+              THIOMBIANO · Simon WORO · Afi AMÉTÉFÉ · Pasteur Charles YONI ·
+              Adjeh PALÉ · Prince O. OUÉDRAOGO · Josué KAMBOU · Joseph YARGA
             </p>
           </div>
         </aside>
