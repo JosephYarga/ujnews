@@ -395,11 +395,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 60%,
-    rgba(10, 14, 38, 0.5)
-  );
+  background: linear-gradient(180deg, transparent 60%, rgba(10, 14, 38, 0.5));
 }
 .hero-figure img {
   width: 100%;
@@ -425,34 +421,37 @@ a {
 
 /* ── stat strip ── */
 .stat-strip {
-  background: var(--paper-2);
-  border-top: 1px solid var(--gold);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+
 .stat-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 }
+
 .stat {
-  padding: 28px 20px;
   text-align: center;
-  border-left: 1px dashed rgba(15, 22, 56, 0.14);
+  min-width: 140px;
 }
-.stat:first-child {
-  border-left: none;
-}
+
 .stat-num {
-  font-family: var(--serif);
-  font-size: clamp(1.7rem, 3.6vw, 2.3rem);
-  color: var(--navy);
-  font-weight: 500;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
 }
+
 .stat-label {
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.09em;
+  text-align: center;
+  font-size: 0.9rem;
   text-transform: uppercase;
-  color: var(--text-muted);
-  margin-top: 4px;
+  letter-spacing: 0.08em;
 }
 @media (max-width: 700px) {
   .stat-grid {
@@ -893,11 +892,7 @@ h3 {
   font-size: 1.04rem;
 }
 .tl-item.current {
-  background: linear-gradient(
-    90deg,
-    rgba(201, 153, 63, 0.12),
-    transparent
-  );
+  background: linear-gradient(90deg, rgba(201, 153, 63, 0.12), transparent);
   border-radius: 12px;
   padding-top: 6px;
   padding-bottom: 40px;
