@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta
       property="og:title"
-      content="UJ News — 13ᵉ édition · 20 ans des Universités des Jeunes"
+      content="UJ News — Jour 2 · Une jeunesse baptisée du feu et du Saint-Esprit"
     />
     <meta
       property="og:description"
-      content="Découvrez l'actualité de la 13ᵉ édition des Universités des Jeunes et la célébration des 20 ans des UJ."
+      content="13ᵉ édition des Universités des Jeunes : les trois enseignements du Jour 2, du bulletin quotidien N°001 — baptême du Saint-Esprit, délivrance et identité en Christ."
     />
     <meta
       property="og:image"
@@ -17,1520 +17,627 @@
     <meta property="og:url" content="https://ujnews.vercel.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="UJ News" />
-    <!-- Pour WhatsApp, Facebook, LinkedIn, etc. -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="UJ News — 13ᵉ édition · 20 ans des Universités des Jeunes"
+      content="UJ News — Jour 2 · Une jeunesse baptisée du feu et du Saint-Esprit"
     />
     <meta
       name="twitter:description"
-      content="Découvrez l'actualité de la 13ᵉ édition des Universités des Jeunes."
+      content="13ᵉ édition des Universités des Jeunes — récit du Jour 2, bulletin N°001."
     />
     <meta
       name="twitter:image"
-      content="https://ujnews.vercel.app/images/hero.jpg"
+      content="https://ujnews.vercel.app/J2/maman.jpg"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UJ News — 13ᵉ édition · 20 ans des Universités des Jeunes</title>
+    <title>UJ News — Jour 2 · 13ᵉ édition des Universités des Jeunes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      :root {
-        --bg: #faf8f4;
-        --surface: #ffffff;
-        --surface-alt: #f3f0ea;
-        --text: #1a1a2e;
-        --text-soft: #3d3d5c;
-        --text-muted: #7a7a95;
-        --navy: #0f1a3a;
-        --navy-light: #1a2d5a;
-        --gold: #c78a2b;
-        --gold-light: #e8c86a;
-        --gold-glow: #f5e6b0;
-        --rose: #b55a6b;
-        --rose-soft: #f0e0e4;
-        --border: rgba(15, 26, 58, 0.08);
-        --shadow: 0 8px 40px rgba(15, 26, 58, 0.06);
-        --shadow-hover: 0 16px 56px rgba(15, 26, 58, 0.1);
-        --radius: 20px;
-        --radius-sm: 12px;
-        --serif: "DM Serif Display", serif;
-        --sans: "Inter", system-ui, -apple-system, sans-serif;
-        --mono: "JetBrains Mono", monospace;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        background: var(--bg);
-        color: var(--text);
-        font-family: var(--sans);
-        line-height: 1.7;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .container {
-        max-width: 1160px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
-
-      /* ── masthead ── */
-      .masthead {
-        background: var(--navy);
-        padding: 14px 0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        border-bottom: 3px solid var(--gold);
-      }
-      .masthead .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 10px 20px;
-      }
-      .logo {
-        font-family: var(--serif);
-        font-weight: 400;
-        font-size: 1.4rem;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .logo span {
-        color: var(--gold-light);
-      }
-      .logo img {
-        height: 34px;
-        width: 34px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid var(--gold);
-      }
-      .masthead-meta {
-        font-family: var(--mono);
-        font-size: 0.6rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.6);
-      }
-      .masthead-right {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        flex-wrap: wrap;
-      }
-      .masthead-right img {
-        height: 28px;
-        width: 28px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 1px solid var(--gold);
-      }
-
-      /* ── kicker ── */
-      .kicker {
-        background: var(--gold);
-        color: var(--navy);
-        font-family: var(--mono);
-        font-size: 0.65rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        padding: 8px 0;
-        text-align: center;
-      }
-
-      /* ── hero ── */
-      .hero {
-        padding: 40px 0 0;
-      }
-      .hero-eyebrow {
-        font-family: var(--mono);
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: var(--rose);
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        margin-bottom: 12px;
-      }
-      .hero-eyebrow::before {
-        content: "";
-        width: 48px;
-        height: 3px;
-        background: var(--gold);
-        flex-shrink: 0;
-        border-radius: 4px;
-      }
-      .hero-title {
-        font-family: var(--serif);
-        font-weight: 400;
-        font-size: clamp(2.4rem, 8vw, 4.2rem);
-        line-height: 1.04;
-        color: var(--navy);
-        max-width: 18ch;
-        margin-bottom: 16px;
-        letter-spacing: -0.02em;
-      }
-      .hero-title em {
-        font-style: italic;
-        color: var(--rose);
-      }
-      .hero-dek {
-        font-size: clamp(1rem, 2.4vw, 1.15rem);
-        max-width: 60ch;
-        color: var(--text-soft);
-        margin-bottom: 24px;
-        line-height: 1.65;
-        font-weight: 400;
-      }
-
-      .hero-figure {
-        width: 100%;
-        max-width: 700px;
-        aspect-ratio: 16/9;
-        margin: 0 auto 8px;
-        border-radius: var(--radius);
-        overflow: hidden;
-        background: #e8e4d8;
-        box-shadow: 0 16px 48px -24px rgba(15, 26, 58, 0.3);
-      }
-      .hero-figure img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      }
-      .hero-figure:hover img {
-        transform: scale(1.03);
-      }
-      .hero-caption {
-        font-family: var(--mono);
-        font-size: 0.6rem;
-        color: var(--text-muted);
-        padding: 12px 4px 24px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 10px;
-        border-bottom: 1px solid var(--border);
-        margin-bottom: 36px;
-      }
-
-      /* ── grid ── */
-      .grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 280px;
-        gap: 48px;
-        align-items: start;
-      }
-      @media (max-width: 900px) {
-        .grid {
-          grid-template-columns: 1fr;
-          gap: 32px;
-        }
-        .rail {
-          order: -1;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 16px;
-        }
-        .rail .rail-box {
-          margin: 0;
-        }
-      }
-      @media (max-width: 600px) {
-        .rail {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      /* ── lede ── */
-      .lede {
-        font-family: var(--serif);
-        font-size: clamp(1.05rem, 2.6vw, 1.3rem);
-        line-height: 1.6;
-        font-weight: 400;
-        color: var(--navy);
-        background: var(--surface);
-        padding: 24px 28px;
-        border-radius: var(--radius);
-        border-left: 6px solid var(--gold);
-        box-shadow: var(--shadow);
-        margin-bottom: 28px;
-      }
-      .lede::first-letter {
-        font-size: 3.4rem;
-        float: left;
-        line-height: 0.8;
-        padding: 2px 12px 0 0;
-        font-weight: 400;
-        color: var(--rose);
-        font-family: var(--serif);
-      }
-
-      /* ── body text ── */
-      .body p {
-        font-size: 1rem;
-        line-height: 1.85;
-        margin-bottom: 20px;
-        color: var(--text-soft);
-      }
-      .body strong {
-        color: var(--navy);
-        font-weight: 600;
-      }
-
-      /* ── headings ── */
-      h2 {
-        font-family: var(--serif);
-        font-weight: 400;
-        font-size: clamp(1.5rem, 3.6vw, 2rem);
-        color: var(--navy);
-        margin: 44px 0 16px;
-        padding-top: 22px;
-        border-top: 2px solid var(--gold-light);
-        position: relative;
-        letter-spacing: -0.01em;
-      }
-      h2::after {
-        content: "";
-        position: absolute;
-        top: -2px;
-        left: 0;
-        width: 64px;
-        height: 4px;
-        background: var(--gold);
-        border-radius: 4px;
-      }
-      h3 {
-        font-family: var(--serif);
-        font-weight: 400;
-        font-style: italic;
-        font-size: clamp(1rem, 2.2vw, 1.2rem);
-        color: var(--rose);
-        margin: 26px 0 10px;
-      }
-
-      /* ── pull quote ── */
-      .pull {
-        font-family: var(--serif);
-        font-style: italic;
-        font-weight: 400;
-        font-size: clamp(1.15rem, 3vw, 1.5rem);
-        line-height: 1.4;
-        color: var(--navy);
-        border-left: 6px solid var(--gold);
-        margin: 30px 0;
-        padding: 10px 0 10px 26px;
-        background: var(--surface);
-        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-        box-shadow: var(--shadow);
-      }
-      .pull cite {
-        display: block;
-        font-family: var(--mono);
-        font-style: normal;
-        font-size: 0.65rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--rose);
-        margin-top: 10px;
-      }
-
-      /* ── sidebar ── */
-      .rail-box {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        padding: 18px 20px;
-        border-radius: var(--radius-sm);
-        margin-bottom: 18px;
-        box-shadow: var(--shadow);
-        transition: box-shadow 0.25s;
-      }
-      .rail-box:hover {
-        box-shadow: var(--shadow-hover);
-      }
-      .rail-label {
-        font-family: var(--mono);
-        font-size: 0.6rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--rose);
-        margin-bottom: 10px;
-      }
-      .rail-fact {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        font-size: 0.85rem;
-        padding: 7px 0;
-        border-bottom: 1px dashed var(--border);
-        color: var(--text-soft);
-      }
-      .rail-fact:last-child {
-        border-bottom: none;
-      }
-      .rail-fact b {
-        font-family: var(--serif);
-        color: var(--navy);
-        font-weight: 400;
-      }
-      .rail-box p {
-        font-size: 0.85rem;
-        line-height: 1.6;
-        margin: 0;
-        color: var(--text-soft);
-      }
-      .rail-box .theme-italic {
-        font-family: var(--serif);
-        font-style: italic;
-        font-size: 0.9rem;
-        line-height: 1.5;
-        color: var(--navy);
-      }
-
-      /* ── speaker cards ── */
-      .speaker {
-        display: grid;
-        grid-template-columns: 90px 1fr;
-        gap: 16px;
-        background: var(--surface);
-        border: 1px solid var(--border);
-        padding: 16px 20px;
-        margin: 26px 0;
-        align-items: center;
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        transition:
-          box-shadow 0.3s,
-          transform 0.2s;
-      }
-      .speaker:hover {
-        box-shadow: var(--shadow-hover);
-        transform: translateY(-2px);
-      }
-      .speaker img {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid var(--surface);
-        box-shadow: 0 0 0 2px var(--gold);
-      }
-      .speaker-name {
-        font-family: var(--serif);
-        font-weight: 400;
-        font-size: 1.05rem;
-        color: var(--navy);
-        margin: 0 0 2px;
-      }
-      .speaker-role {
-        font-family: var(--mono);
-        font-size: 0.6rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: var(--rose);
-        margin: 0 0 6px;
-      }
-      .speaker p {
-        font-size: 0.86rem;
-        line-height: 1.6;
-        margin: 0;
-        color: var(--text-soft);
-      }
-      @media (max-width: 520px) {
-        .speaker {
-          grid-template-columns: 1fr;
-          text-align: center;
-        }
-        .speaker img {
-          margin: 0 auto;
-          width: 76px;
-          height: 76px;
-        }
-      }
-
-      /* ── inline photo ── */
-      .inline-photo {
-        margin: 32px 0;
-        border-radius: var(--radius);
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: box-shadow 0.3s;
-        max-width: 720px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .inline-photo:hover {
-        box-shadow: var(--shadow-hover);
-      }
-      .inline-photo img {
-        width: 100%;
-        max-height: 280px;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-      }
-      .inline-photo img:hover {
-        transform: scale(1.01);
-      }
-      .inline-photo figcaption {
-        font-family: var(--mono);
-        font-size: 0.6rem;
-        color: var(--text-muted);
-        padding: 12px 6px 0;
-        line-height: 1.5;
-      }
-
-      /* ── speaker avec image (style carte) ── */
-      .speaker-with-img {
-        display: grid;
-        grid-template-columns: 90px 1fr;
-        gap: 16px;
-        background: var(--surface);
-        border: 1px solid var(--border);
-        padding: 16px 20px;
-        margin: 26px 0;
-        align-items: center;
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        transition:
-          box-shadow 0.3s,
-          transform 0.2s;
-      }
-      .speaker-with-img:hover {
-        box-shadow: var(--shadow-hover);
-        transform: translateY(-2px);
-      }
-      .speaker-with-img img {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid var(--surface);
-        box-shadow: 0 0 0 2px var(--gold);
-      }
-      .speaker-with-img .speaker-name {
-        font-family: var(--serif);
-        font-weight: 400;
-        font-size: 1.05rem;
-        color: var(--navy);
-        margin: 0 0 2px;
-      }
-      .speaker-with-img .speaker-role {
-        font-family: var(--mono);
-        font-size: 0.6rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: var(--rose);
-        margin: 0 0 6px;
-      }
-      .speaker-with-img p {
-        font-size: 0.86rem;
-        line-height: 1.6;
-        margin: 0;
-        color: var(--text-soft);
-      }
-      @media (max-width: 520px) {
-        .speaker-with-img {
-          grid-template-columns: 1fr;
-          text-align: center;
-        }
-        .speaker-with-img img {
-          margin: 0 auto;
-          width: 76px;
-          height: 76px;
-        }
-      }
-
-      /* ── list ── */
-      .list {
-        list-style: none;
-        margin: 0 0 22px;
-        padding: 0;
-      }
-      .list li {
-        position: relative;
-        padding-left: 26px;
-        margin-bottom: 10px;
-        font-size: 0.96rem;
-        line-height: 1.6;
-        color: var(--text-soft);
-      }
-      .list li::before {
-        content: "◆";
-        position: absolute;
-        left: 0;
-        color: var(--gold);
-        font-size: 0.8rem;
-      }
-
-      /* ── info card ── */
-      .info-card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-left: 6px solid var(--rose);
-        padding: 20px 24px;
-        margin: 30px 0;
-        border-radius: var(--radius-sm);
-        box-shadow: var(--shadow);
-      }
-      .info-card .rail-label {
-        margin-bottom: 4px;
-      }
-      .info-card p {
-        margin: 0;
-        font-size: 0.94rem;
-        line-height: 1.7;
-        color: var(--text-soft);
-      }
-
-      /* ── timeline ── */
-      .timeline {
-        background: var(--navy);
-        color: #fff;
-        padding: 44px 0 48px;
-        margin: 44px 0 0;
-      }
-      .timeline-head {
-        margin-bottom: 26px;
-      }
-      .timeline-head .rail-label {
-        color: var(--gold-light);
-      }
-      .timeline-head h2 {
-        color: #fff;
-        border-top: none;
-        padding-top: 0;
-        margin-top: 6px;
-      }
-      .timeline-head h2::after {
-        display: none;
-      }
-      .timeline-head p {
-        color: rgba(255, 255, 255, 0.7);
-        max-width: 56ch;
-        font-size: 0.98rem;
-      }
-      .badge-strip {
-        display: flex;
-        gap: 16px;
-        overflow-x: auto;
-        scroll-snap-type: x proximity;
-        padding-bottom: 18px;
-        -webkit-overflow-scrolling: touch;
-      }
-      .badge-strip::-webkit-scrollbar {
-        height: 5px;
-      }
-      .badge-strip::-webkit-scrollbar-thumb {
-        background: var(--gold);
-        border-radius: 6px;
-      }
-      .badge {
-        scroll-snap-align: start;
-        flex: 0 0 170px;
-        background: #fff;
-        color: var(--navy);
-        padding: 16px 14px 18px;
-        border-radius: var(--radius-sm);
-        box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.5);
-        position: relative;
-        transition: transform 0.25s;
-      }
-      .badge:hover {
-        transform: translateY(-4px);
-      }
-      .badge::before {
-        content: "";
-        position: absolute;
-        top: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 14px;
-        height: 14px;
-        background: var(--navy);
-        border-radius: 50%;
-        border: 2px solid var(--gold);
-      }
-      .badge .num {
-        font-family: var(--mono);
-        font-size: 0.55rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: var(--rose);
-      }
-      .badge .year {
-        font-family: var(--serif);
-        font-weight: 400;
-        font-size: 1.3rem;
-        margin: 4px 0 6px;
-        color: var(--navy);
-      }
-      .badge .theme {
-        font-size: 0.7rem;
-        line-height: 1.35;
-        color: var(--text-soft);
-      }
-      .badge.current {
-        background: var(--gold);
-        border: 2px solid #fff;
-      }
-      .badge.current .year,
-      .badge.current .num {
-        color: var(--navy);
-      }
-      .badge.current .theme {
-        color: var(--navy);
-      }
-
-      /* ── footer ── */
-      footer {
-        background: var(--navy);
-        color: rgba(255, 255, 255, 0.6);
-        padding: 26px 0 32px;
-        margin-top: 44px;
-        font-size: 0.78rem;
-      }
-      footer .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 14px;
-        align-items: center;
-      }
-      footer .logo {
-        font-size: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      footer .logo img {
-        height: 26px;
-        width: 26px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 1px solid var(--gold);
-      }
-      footer .logo span {
-        color: var(--gold-light);
-      }
-      @media (max-width: 680px) {
-        footer .container {
-          flex-direction: column;
-          text-align: center;
-        }
-        footer .logo {
-          justify-content: center;
-          width: 100%;
-        }
-        footer div:last-child {
-          width: 100%;
-          text-align: center;
-        }
-      }
-
-      /* ── team section ── */
-      .team-section {
-        margin: 48px 0 32px;
-        padding-top: 8px;
-      }
-      .team-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 18px;
-        margin-top: 16px;
-      }
-      .team-card {
-        background: var(--surface);
-        padding: 12px 16px 14px;
-        border-radius: var(--radius-sm);
-        border-left: 4px solid var(--gold);
-        box-shadow: var(--shadow);
-        transition:
-          transform 0.2s,
-          box-shadow 0.2s;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .team-card:hover {
-        transform: translateY(-3px);
-        box-shadow: var(--shadow-hover);
-      }
-      .team-card .avatar {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background: var(--gold-glow);
-        color: var(--navy);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: var(--serif);
-        font-size: 1rem;
-        font-weight: 400;
-        flex-shrink: 0;
-      }
-      .team-card .name {
-        font-weight: 600;
-        font-size: 0.85rem;
-        color: var(--navy);
-        letter-spacing: -0.01em;
-      }
-      .team-card .role {
-        font-family: var(--mono);
-        font-size: 0.55rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: var(--rose);
-        margin-top: 1px;
-      }
-      @media (max-width: 520px) {
-        .team-grid {
-          grid-template-columns: 1fr 1fr;
-          gap: 12px;
-        }
-        .team-card {
-          padding: 10px 12px;
-        }
-        .team-card .avatar {
-          width: 30px;
-          height: 30px;
-          font-size: 0.8rem;
-        }
-        .team-card .name {
-          font-size: 0.75rem;
-        }
-      }
-      @media (max-width: 400px) {
-        .team-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      /* ── responsive ── */
-      @media (max-width: 680px) {
-        .masthead .container {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .masthead-right {
-          width: 100%;
-          justify-content: space-between;
-        }
-        .hero {
-          padding: 24px 0 0;
-        }
-        .hero-title {
-          font-size: clamp(1.8rem, 9vw, 2.6rem);
-        }
-        .hero-figure {
-          max-width: 100%;
-          aspect-ratio: 4/3;
-          border-radius: var(--radius-sm);
-        }
-        .hero-caption {
-          font-size: 0.55rem;
-          padding-bottom: 18px;
-          margin-bottom: 24px;
-        }
-        .container {
-          padding: 0 16px;
-        }
-        .lede {
-          padding: 18px 20px;
-        }
-        .speaker,
-        .speaker-with-img {
-          padding: 14px 16px;
-          grid-template-columns: 64px 1fr;
-          gap: 12px;
-        }
-        .speaker img,
-        .speaker-with-img img {
-          width: 64px;
-          height: 64px;
-        }
-        .inline-photo {
-          max-width: 100%;
-        }
-        .inline-photo img {
-          max-height: 180px;
-        }
-        .badge {
-          flex: 0 0 140px;
-          padding: 14px 12px;
-        }
-        .timeline {
-          padding: 28px 0 32px;
-        }
-        .info-card {
-          padding: 16px 18px;
-        }
-      }
-      @media (max-width: 420px) {
-        .speaker,
-        .speaker-with-img {
-          grid-template-columns: 1fr;
-          text-align: center;
-        }
-        .speaker img,
-        .speaker-with-img img {
-          margin: 0 auto;
-          width: 66px;
-          height: 66px;
-        }
-        .badge {
-          flex: 0 0 120px;
-        }
-        .inline-photo img {
-          max-height: 140px;
-        }
-        .pull {
-          padding-left: 16px;
-          font-size: 1rem;
-        }
-        .hero-figure {
-          aspect-ratio: 4/3;
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          transition: none !important;
-          animation: none !important;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- ─── MASTHEAD ─── -->
-    <header class="masthead">
+    <header class="topbar">
       <div class="container">
-        <div class="logo">
-          <img src="images/logo.jpg" alt="Logo UJ" />UJ <span>NEWS</span>
+        <div class="brand">
+          <img src="images/logo.jpg" alt="Logo UJ" /><span
+            class="brand-tick"
+          ></span
+          >UJ <em>News</em>
         </div>
-        <div class="masthead-right">
-          <div class="masthead-meta">
-            Mouvement des Jeunes · CIE/MIA — 25 août 2026
-          </div>
-        </div>
+        <nav class="day-nav" aria-label="Navigation entre les journées">
+          <a href="jour1.html" class="day-tab">Jour 1 <span>25 août</span></a>
+          <a href="index.html" class="day-tab active"
+            >Jour 2 <span>26 août</span></a
+          >
+        </nav>
       </div>
     </header>
 
-    <div class="kicker">
-      13ᵉ édition des Universités des Jeunes · EDEN-TBI · 25–29 août 2026
+    <div class="ribbon">
+      <div class="ribbon-track">
+        <span class="ribbon-item">Bulletin quotidien N°001 · Août 2026</span>
+        <span class="ribbon-item">EDEN‑TBI · 25–29 août 2026</span>
+        <span class="ribbon-item">Baptisés du feu pour la mission</span>
+        <span class="ribbon-item">Bulletin quotidien N°001 · Août 2026</span>
+        <span class="ribbon-item">EDEN‑TBI · 25–29 août 2026</span>
+        <span class="ribbon-item">Baptisés du feu pour la mission</span>
+      </div>
     </div>
 
-    <!-- ─── HERO ─── -->
     <section class="hero">
-      <div class="container">
-        <div class="hero-eyebrow">Grand format — 20 ans des UJ</div>
-        <h1 class="hero-title">
-          13ᵉ édition des Universités des Jeunes : <em>20 ans après !</em>
-        </h1>
-        <p class="hero-dek">
-          De 2006 à 2026, douze éditions ont façonné une génération. Retour sur
-          la genèse d'un cadre de formation, la prière d'action de grâces qui a
-          ouvert cette édition anniversaire, et les voix qui ont marqué la
-          cérémonie d'ouverture.
-        </p>
-        <div class="hero-figure">
-          <img
-            src="images/hero.jpg"
-            alt="Cérémonie d'actions de grâces pour les 20 ans des Universités des Jeunes"
-            width="754"
-            height="530"
-            loading="eager"
+      <div class="stars" id="heroStars"></div>
+      <div class="trajectory">
+        <svg viewBox="0 0 1240 660" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="goldGrad" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0%" stop-color="#c9993f" stop-opacity="0" />
+              <stop offset="35%" stop-color="#c9993f" stop-opacity=".9" />
+              <stop offset="100%" stop-color="#f2d488" stop-opacity="1" />
+            </linearGradient>
+          </defs>
+          <path
+            class="trajectory-path"
+            d="M -40 620 C 220 560, 380 420, 560 340 C 760 250, 980 190, 1240 40"
           />
-        </div>
-        <div class="hero-caption">
-          <span
-            >Actions de grâces pour 20 ans des Universités des Jeunes, célébrées
-            à l'ouverture de la 13ᵉ édition.</span
-          >
-          <span>EDEN-TBI</span>
-        </div>
+          <circle class="trajectory-dot" r="5" fill="#f2d488" />
+        </svg>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-eyebrow reveal">Jour 2 : matin — Bulletin N°001</div>
+        <h1 class="hero-title reveal">
+          Une jeunesse <em>baptisée du feu</em> et du Saint-Esprit pour la
+          mission
+        </h1>
+        <p class="hero-dek reveal">
+          Trois enseignements ont rythmé la deuxième journée des Universités des
+          Jeunes : l'appel à la pureté et à la mission par la marraine Dr
+          Hortense KARAMBIRI, la délivrance et le brisement des chaînes prêchés
+          par le Prophète Voyant Emmanuel SAWADOGO, et l'affirmation de
+          l'identité en Christ enseignée par le Bishop D. F. N'CHO.
+        </p>
+      </div>
+      <div class="hero-figure reveal container" style="max-width: 760px">
+        <img
+          src="images/J2/maman.jpg"
+          alt="Dr Hortense Karambiri enseignant lors du Jour 2 des Universités des Jeunes"
+          loading="eager"
+        />
+      </div>
+      <div class="hero-caption">
+        <span
+          >Dr Hortense KARAMBIRI, marraine de la 13ᵉ édition, lors de son
+          enseignement « Tu es baptisé(e) du feu et du Saint-Esprit pour la
+          mission ».</span
+        >
+        <span>EDEN‑TBI</span>
       </div>
     </section>
 
-    <!-- ─── INTRO + SIDEBAR ─── -->
+    <div class="stat-strip">
+      <div class="container stat-grid">
+        <div class="stat">
+          <div class="stat-num" data-count="1">0</div>
+          <div class="stat-label">bulletin N°</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="3">0</div>
+          <div class="stat-label">orateurs</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="8000" data-suffix="+">0</div>
+          <div class="stat-label">participants</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="3">0</div>
+          <div class="stat-label">appels lancés</div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <div class="grid">
         <div class="col">
-          <div class="lede">
-            Portée par le Fondateur délégué du CIE/MIA, l'initiative des
-            Universités des Jeunes (UJ) vise à équiper les jeunes dans un cadre
-            de formation et d'expressions diversifiées pour
-            <strong>leur essor spirituel, intellectuel, social et moral</strong
-            >. Elles rassemblent à chaque édition les jeunes d'horizons divers
-            et s'articulent autour de thématiques qui intéressent les jeunes.
+          <div class="lede reveal">
+            À la 2ᵉ journée des Universités des Jeunes 2026, la jeunesse a été
+            conduite, tour à tour, à travers
+            <strong>le feu du Saint-Esprit</strong> qui sanctifie et envoie en
+            mission, <strong>la délivrance</strong>
+            qui brise les chaînes et les malédictions, puis
+            <strong>l'identité en Christ</strong> qui fonde la destinée. Trois
+            enseignements, un même fil : une jeunesse préparée, purifiée et
+            consciente de qui elle est en Dieu.
           </div>
-          <div class="body">
+          <div class="body reveal">
             <p>
-              Depuis sa création en 2006, les UJ ont abordé les thématiques
-              suivantes :
+              Retour sur les temps forts de cette deuxième journée, tels que
+              relayés par le bulletin quotidien N°001 des Universités des Jeunes
+              du CIE/MIA.
             </p>
           </div>
         </div>
-
         <aside class="rail">
-          <div class="rail-box">
+          <div class="rail-box reveal">
             <div class="rail-label">En bref</div>
-            <div class="rail-fact"><span>Édition</span><b>13ᵉ</b></div>
-            <div class="rail-fact"><span>Dates</span><b>25–29 août</b></div>
-            <div class="rail-fact"><span>Lieu</span><b>EDEN-TBI</b></div>
-            <div class="rail-fact"><span>Participants</span><b>≈ 8 000</b></div>
-            <div class="rail-fact"><span>Origine</span><b>2006</b></div>
+            <div class="rail-fact"><span>Bulletin</span><b>N°001</b></div>
+            <div class="rail-fact">
+              <span>Édition</span><b>Jour 2 : matin</b>
+            </div>
+            <div class="rail-fact"><span>Lieu</span><b>EDEN‑TBI</b></div>
+            <div class="rail-fact"><span>Orateurs</span><b>3</b></div>
           </div>
-          <div class="rail-box">
-            <div class="rail-label">Thème 2026</div>
+          <div class="rail-box reveal">
+            <div class="rail-label">Thème du jour</div>
             <p class="theme-italic">
-              « Jeunes conquérants vainqueurs, connaissons en vérité notre Dieu,
-              agissons avec fermeté dans l'affirmation de notre identité en
-              Christ »
+              « Tu es baptisé(e) du feu et du Saint-Esprit pour la mission »
             </p>
           </div>
         </aside>
       </div>
     </div>
 
-    <!-- ─── TIMELINE ─── -->
-    <section class="timeline">
-      <div class="container">
-        <div class="timeline-head">
-          <div class="rail-label">Chronologie</div>
-          <h2>Vingt ans, douze thèmes</h2>
-          <p>
-            Chaque édition des UJ a porté un mot d'ordre distinct — une
-            promesse, une étape. Faites défiler pour parcourir deux décennies de
-            thématiques.
-          </p>
-        </div>
-        <div class="badge-strip">
-          <div class="badge">
-            <div class="num">1ère</div>
-            <div class="year">2006</div>
-            <div class="theme">« Prêt pour le combat »</div>
-          </div>
-          <div class="badge">
-            <div class="num">2e</div>
-            <div class="year">2007</div>
-            <div class="theme">« Courir vers le but »</div>
-          </div>
-          <div class="badge">
-            <div class="num">3e</div>
-            <div class="year">2008</div>
-            <div class="theme">
-              « Rôle et place de la jeunesse dans la société »
-            </div>
-          </div>
-          <div class="badge">
-            <div class="num">4e</div>
-            <div class="year">2009</div>
-            <div class="theme">
-              « Le monde n'attend plus que toi, lève-toi et relève le défi »
-            </div>
-          </div>
-          <div class="badge">
-            <div class="num">5e</div>
-            <div class="year">2011</div>
-            <div class="theme">
-              « Comment découvrir sa destinée et libérer le champion qui est en
-              toi »
-            </div>
-          </div>
-          <div class="badge">
-            <div class="num">6e</div>
-            <div class="year">2012</div>
-            <div class="theme">
-              « Jeunesse d'impact : de l'incubation spirituelle à l'expansion »
-            </div>
-          </div>
-          <div class="badge">
-            <div class="num">7e</div>
-            <div class="year">2013</div>
-            <div class="theme">
-              « Vivre une vie abondante pour triompher du monde »
-            </div>
-          </div>
-          <div class="badge">
-            <div class="num">8e</div>
-            <div class="year">2014</div>
-            <div class="theme">
-              « Fils de Dieu, le monde attend ta manifestation »
-            </div>
-          </div>
-          <div class="badge">
-            <div class="num">9e</div>
-            <div class="year">2015</div>
-            <div class="theme">« Sois un ambassadeur pour Christ »</div>
-          </div>
-          <div class="badge">
-            <div class="num">10e</div>
-            <div class="year">2016</div>
-            <div class="theme">
-              « Vivre et marcher sous le ciel ouvert de la faveur divine »
-            </div>
-          </div>
-          <div class="badge">
-            <div class="num">11e</div>
-            <div class="year">2017</div>
-            <div class="theme">
-              « Le jeune chrétien : Lumière et Témoin de Christ »
-            </div>
-          </div>
-          <div class="badge">
-            <div class="num">12e</div>
-            <div class="year">2024</div>
-            <div class="theme">
-              « Quelle conquête victorieuse pour la jeunesse sous le ciel ouvert
-              ? »
-            </div>
-          </div>
-          <div class="badge current">
-            <div class="num">13e · en cours</div>
-            <div class="year">2026</div>
-            <div class="theme">
-              « Jeunes conquérants vainqueurs, connaissons en vérité notre Dieu,
-              agissons avec fermeté dans l'affirmation de notre identité en
-              Christ »
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── MAIN CONTENT ─── -->
     <div class="container">
       <div class="grid">
         <div class="col">
-          <h2>Vingt ans de fidélité : une prière pour dire merci</h2>
+          <h2 class="reveal">
+            Une jeunesse baptisée du feu et du Saint-Esprit pour la mission
+          </h2>
 
-          <figure class="inline-photo">
+          <div class="speaker reveal">
             <img
-              src="images/group.jpg"
-              alt="Remise d'attestations aux anciens responsables du Mouvement des Jeunes du CIE/MIA"
-              width="1200"
-              height="515"
-              loading="lazy"
-            />
-            <figcaption>
-              Remise d'attestations et de présents symboliques aux anciens
-              responsables du Mouvement des Jeunes du CIE/MIA, en reconnaissance
-              de leur leadership.
-            </figcaption>
-          </figure>
-
-          <div class="body">
-            <p>
-              Dans cette prière, le Pasteur Serge Samandoulgou, Coordonnateur
-              national du Mouvement des Jeunes du CIE/MIA, a exprimé sa
-              reconnaissance à Dieu par des actions de grâce et rendu hommage
-              aux parents spirituels, aux parrains des éditions passées puis aux
-              pionniers des Universités des Jeunes. Il a également exprimé sa
-              gratitude aux aînés ayant soutenu l'œuvre par leurs prières, leurs
-              conseils et leurs sacrifices. Ce temps s'est conclu par une remise
-              d'attestation et de symboliques présents aux bien-aimés ancien
-              Coordonnateur national et ancien Secrétaire général du Mouvement
-              des Jeunes du CIE/MIA, respectivement Firmin SOME et Jean-Pascal
-              BASSONO en guise de reconnaissance pour leur leadership.
-            </p>
-            <p>
-              Ce mardi 25 août 2026, EDEN-TBI a ouvert ses portes à la 13e
-              édition des Universités des Jeunes (UJ) du CIE/MIA, marquant le
-              coup d'envoi de ce temps d'équipement de la jeunesse.
-            </p>
-          </div>
-
-          <h2>Une ouverture placée sous le signe de l'identité</h2>
-          <div class="body">
-            <p>
-              Placée sous le thème « Jeunes conquérants vainqueurs, connaissons
-              en vérité notre Dieu, agissons avec fermeté dans l'affirmation de
-              notre identité en Christ », cette édition rassemble environ 8 000
-              jeunes venus du Burkina Faso, d'Afrique et d'Europe.
-            </p>
-            <p>
-              Sous le marrainage de Dr Hortense KARAMBIRI, Pasteur principal
-              d'EDEN-TBI, cette cérémonie a été marquée par la présence de
-              plusieurs personnalités dont le Patriarche Mamadou Philippe
-              KARAMBIRI, Fondateur délégué du CIE/MIA et initiateur des UJ, et
-              Son Excellence Tertius Zongo, Conseiller spécial de la Jeunesse du
-              CIE-MIA.
-            </p>
-          </div>
-
-          <div class="speaker">
-            <img
-              src="images/tientega.jpg"
-              alt="Achille Tientega"
-              width="469"
-              height="508"
-              loading="lazy"
-            />
-            <div>
-              <div class="speaker-name">Achille Tientega</div>
-              <div class="speaker-role">PCO — Discours d'ouverture</div>
-              <p>
-                Prenant la parole, le PCO Achille TIENTEGA a souhaité la
-                bienvenue à tous les participants avant de situer le contexte de
-                cette édition des UJ. Il a ensuite présenté les deux grands axes
-                de l'événement. Le premier axe est consacré aux enseignements
-                bibliques en lien avec le thème des UJ ainsi qu'aux différents
-                temps de prière et d'édification spirituelle. Le second axe
-                porte sur les ateliers, les conférences thématiques et l'action
-                citoyenne prévue à Faso Mêbo. Pour cette édition, plusieurs
-                orateurs dont, le Bishop Daniel Fulbert N'CHO, le Pasteur
-                Oumarou Josué OUEDRAOGO et l'Enseignant Amen KOSSI sont au
-                programme.
-              </p>
-            </div>
-          </div>
-
-          <div class="speaker">
-            <img
-              src="images/marraine.jpg"
+              src="images/J2/maman.jpg"
               alt="Dr Hortense Karambiri"
-              width="500"
-              height="528"
               loading="lazy"
             />
             <div>
               <div class="speaker-name">Dr Hortense Karambiri</div>
               <div class="speaker-role">Marraine de la 13ᵉ édition</div>
               <p>
-                La marraine de cette 13e édition à l'entame de son discours
-                adressé à ses filleuls, exprime sa reconnaissance à Dieu, tout
-                en saluant l'initiateur de ce cadre de rassemblement de la
-                jeunesse du CIE/MIA en particulier et de l'Église corps de
-                Christ en général. Pour elle, plus qu'un slogan, le thème de
-                cette édition est un appel à la connaissance véritable de son
-                Dieu par une relation personnelle et vivante ; un appel à
-                assumer pleinement son identité en Christ. Poursuivant son
-                adresse à la jeunesse, la marraine précise qu'être « jeune
-                conquérant vainqueur » ne consiste nullement à conquérir les
-                autres, mais à d'abord conquérir ses propres peurs, ses doutes,
-                ses compromis et ses limites. C'est seulement ce modèle de jeune
-                conquérant vainqueur qui constitue non seulement une force pour
-                l'Église d'aujourd'hui, mais également l'avenir de l'Église de
-                demain ; portant ainsi le flambeau de la foi avec intelligence,
-                courage, intégrité et détermination. Pour clore son propos, elle
-                encourage la jeunesse à être des ambassadeurs du Royaume de
-                Dieu.
+                Un appel à la jeunesse chrétienne à rester ferme face aux
+                pressions de la société, de la solitude aux réseaux sociaux.
               </p>
             </div>
           </div>
 
-          <div class="info-card">
-            <div class="rail-label">Informations pratiques</div>
+          <div class="body reveal">
             <p>
-              Cette 13e édition, débutée ce 25 août se veut un temps privilégié
-              de formation, d'enseignement et de communion fraternelle. La
-              cérémonie d'ouverture s'est achevée dans une ambiance conviviale
-              marquée par la détermination de la jeunesse à être des
-              ambassadeurs pour Christ.
+              À la 2ᵉ journée des Universités des Jeunes 2026, la marraine de
+              l'événement, Dr Hortense KARAMBIRI, a invité la jeunesse
+              chrétienne à rester ferme face aux pressions de la société. Son
+              enseignement portait sur le thème suivant : « Tu es baptisé(e) du
+              feu et du Saint-Esprit pour la mission ».
+            </p>
+            <p>
+              Avant d'entrer dans le vif du thème, l'oratrice a évoqué les
+              difficultés auxquelles les jeunes sont confrontés. Elle a cité le
+              chômage, les difficultés économiques, les pressions familiales,
+              les échecs sentimentaux et la solitude qui constituent une source
+              de fragilité. À ces réalités s'ajoutent les réseaux sociaux et la
+              multiplication des contenus numériques. Ces différentes pressions
+              influencent les choix des jeunes à différents niveaux de leur vie
+              et nourrissent leur frustration, leur jalousie et leur complexe.
+            </p>
+            <p>
+              Face à ces défis, le Dr Hortense KARAMBIRI a appelé les jeunes au
+              discernement, les mettant en garde contre la banalisation de la
+              sexualité, la pornographie et les propositions de gain facile
+              d'argent, car celles-ci constituent des sources de tentation et de
+              perdition. Les jeunes, pour être des ambassadeurs du Royaume des
+              Cieux, doivent cultiver des valeurs de
+              <strong>maîtrise de soi, de pureté et de dignité</strong>. Leur
+              corps ne doit pas être un instrument de manipulation et ne doit
+              pas faire l'objet d'une quelconque exploitation.
             </p>
           </div>
 
-          <h2>Le décollage de l'Afrique commence par une jeunesse préparée</h2>
-          <h3>Message introductif du pasteur Serge Samandoulgou</h3>
+          <blockquote class="pull">
+            « Il ne regarde pas à l'apparence extérieure, mais au cœur. Rien
+            n'est caché ou secret à ses yeux. »<cite
+              >Dr Hortense Karambiri</cite
+            >
+          </blockquote>
 
-          <div class="speaker-with-img">
+          <div class="body reveal">
+            <p>
+              Poursuivant son enseignement, la marraine n'a pas manqué de
+              rappeler que la vie dans le secret est d'une importance capitale
+              aux yeux de Dieu. Pour relever ce défi, elle a invité ses filleuls
+              à chercher Dieu de tout leur cœur, s'appuyant notamment sur
+              <strong>Jérémie 29:13-14</strong> : « Vous me chercherez et vous
+              me trouverez, si vous me cherchez de tout votre cœur... ». La
+              prière, la méditation de la Parole de Dieu et la communion avec le
+              Saint-Esprit doivent ainsi occuper une place importante dans la
+              vie des jeunes.
+            </p>
+            <p>
+              Par-dessus tout, chaque jeune doit être baptisé de feu et du
+              Saint-Esprit. Le baptême de feu représente une œuvre intérieure de
+              sanctification ; le revêtement du Saint-Esprit équipe ensuite de
+              puissance. Cette puissance n'est toutefois pas destinée à une
+              simple expérience émotionnelle : elle doit conduire à la mission.
+              Les jeunes sont donc appelés à devenir des témoins et des
+              serviteurs du Dieu vivant, à l'image de Joseph qui illustre la
+              résistance face à la tentation, de Daniel qui représente la
+              fidélité à ses convictions dans un environnement hostile, de David
+              qui a montré le courage face à Goliath et de Marie qui a exprimé
+              sa disponibilité pour la mission du Seigneur. Jérémie et Timothée
+              rappellent enfin que la jeunesse n'est pas un obstacle au service
+              de Dieu ; malgré leur âge, ils ont été appelés à exercer des
+              responsabilités.
+            </p>
+            <p>
+              Au terme de son enseignement, la marraine a encouragé les jeunes à
+              rester fermes dans la foi. Pour elle, la jeunesse chrétienne doit
+              s'appuyer sur la puissance du Saint-Esprit pour affronter les
+              défis de son époque, résister aux tentations et accomplir la
+              mission qui lui est confiée : elle est appelée à être
+              <em>Sel et Lumière</em> — une génération de témoins et de
+              serviteurs de Dieu.
+            </p>
+          </div>
+
+          <div class="info-card reveal">
+            <div class="rail-label">Versets clés</div>
+            <p>Jérémie 29:13-14</p>
+          </div>
+
+          <h2 class="reveal">
+            Délivrance et brisement des chaînes : un appel à la liberté
+            spirituelle
+          </h2>
+
+          <div class="speaker reveal">
             <img
-              src="images/pasteurserge.jpg"
-              alt="Pasteur Serge Samandoulgou"
-              width="400"
-              height="400"
+              src="images/J2/prophet.jpg"
+              alt="Prophète Voyant Emmanuel Sawadogo"
               loading="lazy"
             />
             <div>
-              <div class="speaker-name">Pasteur Serge Samandoulgou</div>
+              <div class="speaker-name">Prophète Voyant Emmanuel Sawadogo</div>
               <div class="speaker-role">
-                Coordonnateur national du Mouvement des Jeunes du CIE/MIA
+                Les jeunes, acteurs de l'avenir de l'Église et de la nation
               </div>
               <p>
-                Message introductif : « Le décollage de l'Afrique commence par
-                une jeunesse préparée »
+                Un ministère de délivrance et de brisement des chaînes et des
+                malédictions en faveur de la jeunesse rassemblée.
               </p>
             </div>
           </div>
 
-          <div class="body">
+          <div class="body reveal">
             <p>
-              Le pasteur Serge Samandoulgou a rappelé qu'avant 2006, la jeunesse
-              disposait de peu de cadres réellement dédiés à son équipement,
-              souvent sollicitée pour servir sans être suffisamment préparée aux
-              défis spirituels et professionnels de son temps. C'est cette
-              réalité qui a conduit le pasteur Mamadou Philippe KARAMBIRI,
-              Fondateur Délégué du CIE/MIA à vouloir transmettre à la jeunesse
-              ce que Dieu avait déposé en lui.
+              À la première matinée des UJ 2026, le Prophète Voyant Emmanuel
+              SAWADOGO a exercé un ministère de « délivrance et de brisement des
+              chaînes et des malédictions » en faveur des jeunes rassemblés à
+              l'occasion.
             </p>
+          </div>
+
+          <h3 class="reveal">
+            La jeunesse, l'avenir de l'Église et de la nation
+          </h3>
+          <div class="body reveal">
             <p>
-              S'appuyant sur les paroles prophétiques reçues par notre père
-              spirituel pour la décennie 2020-2030 — celles d'une Afrique
-              appelée à se développer et d'un déclic annoncé au niveau de la
-              jeunesse — le Coordonnateur national des Jeunes a exhorté les
-              participants à se préparer sérieusement pour être des acteurs du
-              décollage de l'Afrique. Dans cette perspective, il a invité chacun
-              à se questionner sur sa contribution réelle à la manifestation de
-              ce décollage.
+              Dès l'entame de son enseignement, le Prophète Voyant Emmanuel
+              SAWADOGO a centré son message sur « la délivrance et le brisement
+              des chaînes et des malédictions », car pour lui, une jeunesse
+              enchaînée dans le spirituel ne peut être efficace dans le naturel.
+              Fer de lance de tout développement, elle doit prendre conscience
+              de son rôle, combien important, afin de se positionner pour
+              assumer pleinement sa part de responsabilité au moment opportun.
+              Elle ne doit pas être simplement spectatrice des événements en
+              cours et à venir ; elle doit plutôt être une génération appelée à
+              façonner l'avenir de l'Église et de la nation. Cette mission exige
+              une attitude spirituelle particulière : un cœur ouvert, disponible
+              et réceptif à la Parole de Dieu.
             </p>
+          </div>
+
+          <h3 class="reveal">Comprendre la malédiction et la délivrance</h3>
+          <div class="body reveal">
             <p>
-              Il a illustré son propos par le récit de
-              <strong>Genèse 15:13</strong> : Dieu avait annoncé à Abraham
-              quatre cents ans de servitude pour sa descendance, mais faute de
-              préparation, cette période s'est prolongée à quatre cent trente
-              ans. Revenant sur les premiers versets de
-              <strong>Genèse 1:1-3</strong>, il a souligné que Dieu ne bénit pas
-              le désordre, et que recevoir la Parole de Dieu pendant les
-              Universités des Jeunes suppose d'abord d'accepter que son ordre
-              s'installe dans nos vies par le mouvement du Saint-Esprit.
+              Dans son exposé, le Prophète Voyant Emmanuel SAWADOGO a expliqué
+              ce en quoi consiste la malédiction et la délivrance. Il définit la
+              malédiction comme l'action d'attirer ou de prononcer le malheur,
+              l'échec ou la destruction sur la vie d'une personne, d'une famille
+              et d'une communauté ; elle peut résulter de paroles négatives, de
+              pratiques occultes ou encore d'héritages spirituels transmis de
+              génération en génération. À l'inverse, la délivrance est une œuvre
+              salvatrice de Dieu qui consiste à libérer l'Homme de toute forme
+              de malédictions. Elle rompt les liens qui maintiennent l'individu
+              dans l'esclavage, afin de le conduire vers la destinée que Dieu
+              lui a réservée.
+            </p>
+          </div>
+
+          <h3 class="reveal">
+            Les « filets de l'oiseleur » qui menacent la jeunesse
+          </h3>
+          <div class="body reveal">
+            <p>
+              S'appuyant sur l'image biblique du « filet de l'oiseleur »,
+              extraite de <strong>Psaumes 91:3</strong>, l'orateur a mis en
+              lumière les nombreux pièges susceptibles d'entraver
+              l'épanouissement spirituel et personnel des jeunes : la maladie,
+              la paresse, la rébellion, le mensonge, la pornographie, la
+              masturbation, la fornication, les mauvaises fréquentations,
+              l'alcool, les stupéfiants et les échecs répétés. Ces réalités
+              agissent comme des pièges invisibles destinés à détourner les
+              jeunes de leur vocation et à les empêcher d'entrer dans leur
+              destinée. Toutefois, le message central demeure celui de
+              l'espérance : aucun filet n'est trop solide pour résister à
+              l'action de Dieu ; toute sorte de filet peut être brisé et
+              l'oiseau peut retrouver sa liberté (<strong>Psaume 124:7</strong
+              >). De même, toute vie humaine sous une quelconque malédiction
+              peut être délivrée par l'œuvre accomplie de Christ.
             </p>
           </div>
 
           <blockquote class="pull">
-            « Dieu ne bénit pas le désordre. »<cite
-              >Pasteur Serge Samandoulgou</cite
-            >
+            « Aucun filet n'est trop solide pour résister à l'action de Dieu.
+            »<cite>Prophète Voyant Emmanuel Sawadogo</cite>
           </blockquote>
 
-          <h2>
-            « Vous n'êtes pas nés pour échouer, Dieu a pour vous un avenir »
-          </h2>
-          <h3>
-            Le témoignage sans filtre du Pasteur Mamadou Philippe KARAMBIRI
+          <h3 class="reveal">
+            La sanctification : condition d'une génération puissante
           </h3>
+          <div class="body reveal">
+            <p>
+              L'un des points majeurs de l'intervention du Prophète Voyant a
+              porté sur la sanctification. Il a insisté sur le fait que la
+              sainteté ne constitue pas une contrainte imposée au croyant ; elle
+              est une condition essentielle pour expérimenter la puissance de
+              Dieu. Une vie séparée du péché, purifiée et consacrée est disposée
+              à la manifestation de la puissance de Dieu.
+            </p>
+          </div>
 
-          <figure class="inline-photo">
+          <div class="info-card reveal">
+            <div class="rail-label">Versets clés</div>
+            <p>Psaumes 91:3 · Psaume 124:7</p>
+          </div>
+
+          <h2 class="reveal">
+            Connais ton identité en Christ : redécouvrir sa destinée divine
+          </h2>
+
+          <div class="speaker reveal">
             <img
-              src="images/karambiri.jpg"
-              alt="Pasteur Mamadou Philippe Karambiri au micro"
-              width="531"
-              height="489"
+              src="images/J2/bishop.jpg"
+              alt="Bishop Daniel Fulbert N'Cho"
               loading="lazy"
             />
-            <figcaption>
-              Le Fondateur délégué du CIE/MIA, Pasteur Mamadou Philippe
-              Karambiri, lors de son intervention.
-            </figcaption>
-          </figure>
+            <div>
+              <div class="speaker-name">Bishop D. F. N'Cho</div>
+              <div class="speaker-role">« Connais ton identité en Christ »</div>
+              <p>
+                L'identité, cible privilégiée des attaques spirituelles, et
+                semence de la destinée que Dieu réserve à chacun.
+              </p>
+            </div>
+          </div>
 
-          <div class="body">
+          <div class="body reveal">
             <p>
-              Cette ouverture officielle des Universités des Jeunes du Mouvement
-              des Jeunes du CIE-MIA a connu également l'intervention du
-              Fondateur délégué, le Pasteur Mamadou Philippe KARAMBIRI porté
-              pour l'essentiel sur le témoignage de sa vie. Le père spirituel
-              rassure les jeunes : Vous n'êtes pas nés pour échouer, vous avez
-              de l'avenir.
+              Dans la 2ᵉ soirée des UJ 2026, le Bishop D. F. N'CHO a conduit les
+              participants dans un temps d'enseignement sur « Connais ton
+              identité en Christ ».
             </p>
+          </div>
+
+          <h3 class="reveal">
+            L'identité, une cible privilégiée des attaques spirituelles
+          </h3>
+          <div class="body reveal">
             <p>
-              Ainsi, en parlant de vocation et de l'avenir de l'Afrique, le
-              pasteur Mamadou Philippe KARAMBIRI est revenu sur son propre
-              parcours. En effet, dès son enfance, le patriarche affirme avoir
-              refusé de penser à l'échec et à la pauvreté. Pour lui,
-              <strong
-                >les conditions dans lesquelles une personne commence sa vie ne
-                déterminent pas son avenir.</strong
-              >
-              Derrière ce récit, cette conviction traverse toute son
-              intervention. Son parcours personnel devient ainsi le point
-              central de son adresse à la jeunesse. Elle s'appuie notamment sur
-              la foi biblique : après que Dieu ait créé et béni la terre, il ne
-              peut plus y avoir un pays ou un continent destiné à la pauvreté.
+              Dès l'introduction de son message, l'orateur a souligné que Dieu a
+              attribué une identité à toute chose qu'il a appelée à l'existence.
+              L'identité de l'homme, l'être créé à l'image de Dieu, constitue
+              l'une des principales cibles de l'ennemi. C'est pourquoi les
+              attaques spirituelles visent souvent à déformer ou à détruire
+              cette identité afin d'éloigner l'homme du plan divin.
             </p>
+          </div>
+
+          <h3 class="reveal">
+            L'identité spirituelle, fondement de la destinée
+          </h3>
+          <div class="body reveal">
             <p>
-              Pour le Patriarche si l'Amérique, l'Europe, l'Asie et l'Océanie
-              ont connu leur développement, il n'y a aucun doute, l'Afrique
-              aussi va connaître son développement. Ce décollage, il l'avait
-              annoncé à l'orée de la décennie 2020-2030 au cours d'un séminaire
-              au Bénin en de termes on ne peut plus clairs :
+              Pour le prédicateur, l'identité donnée par Dieu représente la
+              semence même de la destinée. Elle détermine la valeur d'une
+              personne, son potentiel et sa capacité à accomplir les œuvres pour
+              lesquelles elle a été créée. Il a insisté sur le fait que l'une
+              des plus grandes crises auxquelles un être humain peut être
+              confronté est la crise identitaire. L'ennemi cherche d'abord à
+              voler l'identité que Dieu a donnée à l'homme ; lorsqu'il n'y
+              parvient pas, il tente de lui imposer une fausse identité
+              susceptible de l'éloigner de sa vocation et de sa destinée.
             </p>
           </div>
 
           <blockquote class="pull">
-            « L'Afrique va décoller obligatoirement dans cette décennie. »<cite
-              >Pasteur Mamadou Philippe Karambiri</cite
+            « Lorsque Dieu veut transformer la destinée d'une personne, il
+            commence souvent par toucher à son identité. »<cite
+              >Bishop D. F. N'Cho</cite
             >
           </blockquote>
 
-          <div class="body">
+          <div class="body reveal">
             <p>
-              Cette prophétie en cours d'accomplissement a été rappelée à la
-              jeunesse par une courte vidéo diffusée au cours de son
-              intervention. Les UJ s'offrent alors comme un cadre de préparation
-              de la jeunesse pour être des acteurs de la manifestation de cette
-              prophétie en vue d'une transformation de l'Afrique.
-            </p>
-            <p>
-              De son histoire personnelle à sa vision pour le continent, le
-              pasteur Mamadou Philippe KARAMBIRI dessine ainsi une même
-              trajectoire :
-              <em
-                >croire en une destinée gracieuse, se préparer et agir avec foi
-                pour un avenir radieux.</em
-              >
+              L'orateur a illustré son propos par l'exemple de Jacob, dont
+              l'identité de trompeur change pour être Israël (<strong
+                >Genèse 32:28</strong
+              >), marquant ainsi le début d'une nouvelle étape de sa destinée.
             </p>
           </div>
 
-          <!-- ─── ÉQUIPE DE RÉDACTION ─── -->
+          <h3 class="reveal">
+            Une identité qui révèle ce que nous sommes en Christ
+          </h3>
+          <div class="body reveal">
+            <p>
+              L'orateur a présenté l'identité comme une distinction divine qui
+              révèle ce que le croyant possède et ce qu'il est capable
+              d'accomplir en Christ. Une vie équilibrée repose sur trois
+              dimensions fondamentales :
+              <strong>être, avoir et pouvoir</strong>. Ces trois réalités sont
+              intimement liées à l'identité que Dieu confère à ses enfants. Créé
+              à l'image de Dieu, l'homme est appelé à vivre en communion avec
+              son Créateur, à le contenir spirituellement dans sa vie et à
+              manifester sa présence dans le monde. L'identité chrétienne ne se
+              limite donc pas à une appartenance religieuse ; elle définit la
+              nature profonde de l'être humain et sa mission sur la terre.
+            </p>
+          </div>
+
+          <h3 class="reveal">
+            L'identité d'enfant de Dieu, première richesse du croyant
+          </h3>
+          <div class="body reveal">
+            <p>
+              Poursuivant son enseignement, l'homme de Dieu a rappelé que la vie
+              chrétienne commence par la découverte de son identité en Christ.
+              Parmi les nombreuses identités accordées par Dieu, la plus
+              fondamentale est celle d'« enfant de Dieu ». Cette identité
+              confère au croyant une nature divine et une relation privilégiée
+              avec son Père céleste. L'orateur a également souligné que les
+              croyants sont appelés à devenir des « maisons de prière » et des «
+              transporteurs de la puissance de Dieu », signe de leur
+              appartenance au Royaume de Dieu et de leur responsabilité dans la
+              manifestation de sa gloire sur la terre.
+            </p>
+          </div>
+
+          <h3 class="reveal">
+            Comprendre sa mission et sa place dans le monde
+          </h3>
+          <div class="body reveal">
+            <p>
+              Pour le Bishop, connaître son identité permet également de
+              comprendre la raison de sa présence sur terre. Cela donne au
+              croyant une vision claire de sa mission et de son rôle dans la
+              société. Lorsqu'un chrétien sait qui il est en Christ, il devient
+              capable d'affirmer sa position spirituelle, de résister aux
+              influences négatives et de marcher avec assurance dans la destinée
+              que Dieu a préparée pour lui.
+            </p>
+            <p>
+              En conclusion, le Bishop D. F. N'CHO a invité les fidèles à
+              protéger leur identité spirituelle en s'appuyant continuellement
+              sur la Parole de Dieu et sur la direction du Saint-Esprit, seuls
+              fondements qui permettent au croyant de préserver son héritage
+              spirituel, d'accomplir sa mission et de marcher avec assurance
+              dans la destinée que Dieu lui a réservée.
+            </p>
+          </div>
+
+          <div class="info-card reveal">
+            <div class="rail-label">Versets clés</div>
+            <p>Genèse 32:28</p>
+          </div>
+
           <div class="team-section">
-            <h2>Équipe de rédaction</h2>
-            <div class="team-grid">
+            <h2 class="reveal">Équipe de rédaction</h2>
+            <div class="team-grid reveal-stagger">
               <div class="team-card">
                 <div class="avatar">FT</div>
-                <div>
-                  <div class="name">Fidèle TIAMASSA</div>
-                </div>
+                <div class="name">Fidèle TIAMASSA</div>
               </div>
               <div class="team-card">
                 <div class="avatar">YL</div>
-                <div>
-                  <div class="name">Yemboaro P. LOMPO</div>
-                </div>
+                <div class="name">Yemboaro P. LOMPO</div>
               </div>
               <div class="team-card">
                 <div class="avatar">JM</div>
-                <div>
-                  <div class="name">Jacques N. MANA</div>
-                </div>
+                <div class="name">Jacques N. MANA</div>
               </div>
               <div class="team-card">
                 <div class="avatar">RT</div>
-                <div>
-                  <div class="name">Ruth A. THIOMBIANO</div>
-                </div>
+                <div class="name">Ruth A. THIOMBIANO</div>
               </div>
               <div class="team-card">
                 <div class="avatar">SW</div>
-                <div>
-                  <div class="name">Simon WORO</div>
-                </div>
+                <div class="name">Simon WORO</div>
               </div>
               <div class="team-card">
                 <div class="avatar">AA</div>
-                <div>
-                  <div class="name">Afi AMÉTÉFÉ</div>
-                </div>
+                <div class="name">Afi AMÉTÉFÉ</div>
               </div>
               <div class="team-card">
                 <div class="avatar">CY</div>
-                <div>
-                  <div class="name">Pasteur Charles YONI</div>
-                </div>
+                <div class="name">Pasteur Charles YONI</div>
               </div>
               <div class="team-card">
                 <div class="avatar">AP</div>
-                <div>
-                  <div class="name">Adjeh PALÉ</div>
-                </div>
+                <div class="name">Adjeh PALÉ</div>
               </div>
               <div class="team-card">
                 <div class="avatar">PO</div>
-                <div>
-                  <div class="name">Prince O. OUÉDRAOGO</div>
-                </div>
+                <div class="name">Prince O. OUÉDRAOGO</div>
               </div>
               <div class="team-card">
                 <div class="avatar">JK</div>
-                <div>
-                  <div class="name">Josué KAMBOU</div>
-                </div>
+                <div class="name">Josué KAMBOU</div>
               </div>
               <div class="team-card">
                 <div class="avatar">JY</div>
-                <div>
-                  <div class="name">Joseph YARGA</div>
-                </div>
+                <div class="name">Joseph YARGA</div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- ─── SIDEBAR ─── -->
         <aside class="rail">
-          <div class="rail-box">
+          <div class="rail-box reveal">
+            <div class="rail-label">Orateurs du jour</div>
+            <p>
+              Dr Hortense Karambiri — Marraine<br />
+              Prophète Voyant Emmanuel Sawadogo<br />
+              Bishop D. F. N'Cho
+            </p>
+          </div>
+          <div class="rail-box reveal">
+            <div class="rail-label">Signatures</div>
+            <p style="font-size: 0.8rem">
+              Jacques N. MANA — Une jeunesse baptisée du feu et du
+              Saint-Esprit<br />
+              Yemboaro P. LOMPO — Délivrance et brisement des chaînes<br />
+              Affi AMETEFE — Connais ton identité en Christ
+            </p>
+          </div>
+          <div class="rail-box reveal">
             <div class="rail-label">À retenir</div>
             <p>
-              Les paroles prophétiques reçues par le Fondateur délégué pour la
-              décennie 2020-2030 restent le fil conducteur des UJ : une Afrique
-              appelée à se développer, et une jeunesse appelée à s'y préparer.
-            </p>
-          </div>
-          <div class="rail-box">
-            <div class="rail-label">Intervenants attendus</div>
-            <p>
-              Bishop Daniel Fulbert N'CHO<br />Pasteur Oumarou Josué
-              OUEDRAOGO<br />Enseignant Amen KOSSI
-            </p>
-          </div>
-          <div class="rail-box">
-            <div class="rail-label">Équipe de rédaction</div>
-            <p style="font-size: 0.75rem; line-height: 1.6">
-              Fidèle TIAMASSA · Yemboaro P. LOMPO · Jacques N. MANA · Ruth A.
-              THIOMBIANO · Simon WORO · Afi AMÉTÉFÉ · Pasteur Charles YONI ·
-              Adjeh PALÉ · Prince O. OUÉDRAOGO · Josué KAMBOU · Joseph YARGA
+              Feu, délivrance et identité forment une même trajectoire : une
+              jeunesse purifiée, libérée de ses chaînes et ancrée dans ce que
+              Dieu dit d'elle.
             </p>
           </div>
         </aside>
       </div>
     </div>
 
-    <!-- ─── FOOTER ─── -->
     <footer>
       <div class="container">
-        <div class="logo">
-          <img src="images/logo.jpg" alt="Logo UJ" />UJ <span>NEWS</span>
+        <div class="brand">
           <img
-            src="images/logo-ciemia.jpg"
-            alt="Logo CIE-MIA"
-            style="margin-left: 6px"
-          />
+            src="images/logo.jpg"
+            alt="Logo UJ"
+            style="height: 26px; width: 26px"
+          />UJ <em>News</em>
         </div>
         <div>
-          Mouvement des Jeunes du CIE/MIA | Récit de la cérémonie d'ouverture,
+          Mouvement des Jeunes du CIE/MIA | Bulletin quotidien N°001, Jour 2 —
           13ᵉ édition des Universités des Jeunes.
         </div>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
