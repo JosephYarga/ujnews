@@ -51,12 +51,35 @@
   <body>
     <header class="topbar">
       <div class="container">
-        <div class="brand">
-          <img src="images/logo.jpg" alt="Logo UJ" /><span
-            class="brand-tick"
-          ></span
-          >UJ <em>News</em>
+        <div
+          class="brand"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+          "
+        >
+          <!-- Logo CIE/MIA à gauche -->
+          <img
+            src="images/logo-ciemia.jpg"
+            alt="Logo CIE/MIA"
+            style="height: 32px; width: auto; object-fit: contain"
+          />
+
+          <!-- UJ News au centre -->
+          <span style="display: flex; align-items: center; gap: 4px">
+            UJ <em>News</em>
+          </span>
+
+          <!-- Logo UJ à droite -->
+          <img
+            src="images/logo.jpg"
+            alt="Logo UJ"
+            style="height: 26px; width: 26px"
+          />
         </div>
+
         <nav class="day-nav" aria-label="Navigation entre les journées">
           <a href="jour1.html" class="day-tab">Jour 1 <span>25 août</span></a>
           <a href="jour2.html" class="day-tab">Jour 2 <span>26 août</span></a>
@@ -72,13 +95,13 @@
         <span class="ribbon-item"
           >Bulletin quotidien N°002 & N°003 · Août 2026</span
         >
-        <span class="ribbon-item">EDEN‑TBI · 25–29 août 2026</span>
+        <span class="ribbon-item">CIE/MIA EDEN‑TBI · 25–29 août 2026</span>
         <span class="ribbon-item">La loyauté, un style de vie</span>
         <span class="ribbon-item">Connaître son identité, c'est agir</span>
         <span class="ribbon-item"
           >Bulletin quotidien N°002 & N°003 · Août 2026</span
         >
-        <span class="ribbon-item">EDEN‑TBI · 25–29 août 2026</span>
+        <span class="ribbon-item">CIE/MIA EDEN‑TBI · 25–29 août 2026</span>
         <span class="ribbon-item">La loyauté, un style de vie</span>
         <span class="ribbon-item">Connaître son identité, c'est agir</span>
       </div>
@@ -610,13 +633,6 @@
     <footer>
       <div class="container">
         <div class="brand">
-          <img
-            src="images/logo.jpg"
-            alt="Logo UJ"
-            style="height: 26px; width: 26px"
-          />
-          UJ <em>News</em>
-
           <!-- Logo du CIE/MIA -->
           <img
             src="images/logo-ciemia.jpg"
@@ -627,6 +643,12 @@
               margin-left: 14px;
               object-fit: contain;
             "
+          />
+          UJ <em>News</em>
+          <img
+            src="images/logo.jpg"
+            alt="Logo UJ"
+            style="height: 26px; width: 26px"
           />
         </div>
 

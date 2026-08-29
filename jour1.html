@@ -43,12 +43,35 @@
   <body>
     <header class="topbar">
       <div class="container">
-        <div class="brand">
-          <img src="images/logo.jpg" alt="Logo UJ" /><span
-            class="brand-tick"
-          ></span
-          >UJ <em>News</em>
+        <div
+          class="brand"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+          "
+        >
+          <!-- Logo CIE/MIA à gauche -->
+          <img
+            src="images/logo-ciemia.jpg"
+            alt="Logo CIE/MIA"
+            style="height: 32px; width: auto; object-fit: contain"
+          />
+
+          <!-- UJ News au centre (sans logo) -->
+          <span style="display: flex; align-items: center; gap: 4px">
+            UJ <em>News</em>
+          </span>
+
+          <!-- Logo UJ à droite -->
+          <img
+            src="images/logo.jpg"
+            alt="Logo UJ"
+            style="height: 26px; width: 26px"
+          />
         </div>
+
         <nav class="day-nav" aria-label="Navigation entre les journées">
           <a href="jour1.html" class="day-tab active"
             >Jour 1 <span>25 août</span></a
@@ -62,10 +85,10 @@
     <div class="ribbon">
       <div class="ribbon-track">
         <span class="ribbon-item">13ᵉ édition des universités des jeunes</span>
-        <span class="ribbon-item">EDEN‑TBI · 25–29 août 2026</span>
+        <span class="ribbon-item"> CIE/MIA EDEN‑TBI · 25–29 août 2026</span>
         <span class="ribbon-item">20 ans des UJ</span>
         <span class="ribbon-item">13ᵉ édition des universités des jeunes</span>
-        <span class="ribbon-item">EDEN‑TBI · 25–29 août 2026</span>
+        <span class="ribbon-item"> CIE/MIA EDEN‑TBI · 25–29 août 2026</span>
         <span class="ribbon-item">20 ans des UJ</span>
       </div>
     </div>
@@ -660,14 +683,6 @@
       <div class="container">
         <div class="brand">
           <img
-            src="images/logo.jpg"
-            alt="Logo UJ"
-            style="height: 26px; width: 26px"
-          />
-          UJ <em>News</em>
-
-          <!-- Logo du CIE/MIA -->
-          <img
             src="images/logo-ciemia.jpg"
             alt="Logo CIE/MIA"
             style="
@@ -677,6 +692,13 @@
               object-fit: contain;
             "
           />
+          UJ <em>News</em>
+          <img
+            src="images/logo.jpg"
+            alt="Logo UJ"
+            style="height: 26px; width: 26px"
+          />
+          <!-- Logo du CIE/MIA -->
         </div>
 
         <div class="footer-info">
